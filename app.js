@@ -83,6 +83,7 @@ app.post("/listings",
         let newListing = new Listing(req.body.listing);
         await newListing.save();
         res.redirect("/listings");
+        // i got error here bcz i wrote onlu next(err) later i corrected it with the help of my frnds i came to know that we have to write it in if condition
         if(err)
             next(err);
     })
